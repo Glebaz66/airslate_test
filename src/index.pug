@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="css/main.css")
+        script(src="js/script.js", defer, type="module") 
+    body
+        .content
+            .logo
+                img(src="./img/logo.svg", alt="Airslate")
+            form.form.js-form(action="")
+                .form__title Log in to airSlate
+                label.form__label(for="email") Email address
+                input.form__input(type="email", name="email",data-type="email" placeholder="input", autocomplete="off" required) 
+                .form__error validation
+
+                label.form__label(for="password") Password
+                input.form__input(type="password", name="password",data-type="password" placeholder="input", autocomplete="off" required) 
+                .form__error validation
+
+                .form__terms By clicking Log in, you agree to the #[a( href='#' ) Terms of Services] and #[a( href='#' ) Privacy Policy], including receipt of emails from of us about our service.
+
+                button.button-submit.js-submit(role="submit") Log in
+
+                .form__divider or continue with your social accounts
+
+                .form__options 
+                    .option 
+                        a(href="#") 
+                            .option-icon 
+                                img(src="./img/icon-Facebook.svg", alt="icon-Facebook")
+                            .option-name Facebook
+                    .option 
+                        a(href="#") 
+                            .option-icon 
+                                img(src="./img/icon-Google.svg", alt="icon-Google")
+                            .option-name Google
+                    .option 
+                        a(href="#") 
+                            .option-icon 
+                                img(src="./img/icon-Apple.svg", alt="icon-Apple")
+                            .option-name Apple

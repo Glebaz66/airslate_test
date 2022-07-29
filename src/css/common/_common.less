@@ -1,0 +1,54 @@
+@import '../vars/_vars.less';
+@import '../mixins/_mixins.less';
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+button, input {
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: @font-regular;
+    background: @color-bg;
+    font-size: 24px;
+}
+
+.content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .device_width(768px, {
+        .logo {
+            margin-bottom: 50px;
+        }
+    });
+}
+
+.button-submit {
+    color: @color-white;
+    background: @color-btn;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    transition: @transition-ease-in-out;
+
+    &:hover {
+        background: @color-btn-hover;
+    }
+}
