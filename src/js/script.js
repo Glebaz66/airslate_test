@@ -30,10 +30,20 @@ class FormHandler {
 
             elem.addEventListener('keypress', (e) => { this.validateOnKeyPress(e, elem) })
 
-            elem.addEventListener('click', () => { this.handleFocus(elem) })
+            elem.addEventListener('click', () => { 
+                this.handleFocus(elem)
+             })
+
+            elem.addEventListener('focus', () => {
+                elem.classList.remove('focus')
+                elem.classList.remove('error')
+                elem.nextElementSibling.classList.remove('active')
+            })
 
             elem.addEventListener('focusout', () => {
                 elem.classList.remove('focus')
+                elem.classList.remove('error')
+                elem.nextElementSibling.classList.remove('active')
 
                 this.validator(elem)
                 
@@ -56,10 +66,9 @@ class FormHandler {
 
         if(input.value === '' || match === null){
             return this.isValid = false
-            
         }
-        return this.isValid = true
         
+        return this.isValid = true
     }
 
     validateOnKeyPress(e, input){
