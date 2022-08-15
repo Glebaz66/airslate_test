@@ -13,17 +13,19 @@ html(lang="en")
                 img(src="./img/logo.svg", alt="Airslate")
             form.form.js-form(action="")
                 .form__title Log in to airSlate
-                label.form__label(for="email") Email address
-                input.form__input(type="email", name="email",data-type="email" placeholder="input", autocomplete="off" required) 
-                .form__error validation
+                label.form__label(for="email")
+                    <span>Email address </span>
+                    input.form__input(type="email", name="email",data-type="email" placeholder="Input", autocomplete="off" required) 
+                    .form__error Validation
 
-                label.form__label(for="password") Password
-                input.form__input(type="password", name="password",data-type="password" placeholder="input", autocomplete="off" required) 
-                .form__error validation
+                label.form__label(for="password")
+                    <span>Password</span>
+                    input.form__input(type="password", name="password",data-type="password" placeholder="Input",minlength="1" autocomplete="off" required) 
+                    .form__error.mb-3 Validation
 
                 .form__terms By clicking Log in, you agree to the #[a( href='#' ) Terms of Services] and #[a( href='#' ) Privacy Policy], including receipt of emails from of us about our service.
 
-                button.button-submit.js-submit(role="submit") Log in
+                button.button-default.button-submit.js-submit(role="submit") Log in
 
                 .form__divider or continue with your social accounts
 

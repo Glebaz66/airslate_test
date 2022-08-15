@@ -16,7 +16,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     font-family: @font-regular;
     background: @color-bg;
     font-size: 24px;
@@ -35,16 +34,17 @@ body {
 
     .device_width(768px, {
         .logo {
-            margin-bottom: 50px;
+            margin-bottom: 53px;
         }
     });
 }
 
-.button-submit {
+.button-default {
     color: @color-white;
     background: @color-btn;
-    padding: 10px 0;
+    padding: 12px 0;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
     transition: @transition-ease-in-out;
 
